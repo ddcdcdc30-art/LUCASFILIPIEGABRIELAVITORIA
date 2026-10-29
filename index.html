@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Minhas Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+        <header class="topo">
+            <div>
+                <span class="etiqueta">ORGANIZE SUA ROTINA</span>
+                <h1>Task<span>Flow.</span></h1>
+                <p>Pequenos passos, grandes conquistas.</p>
+            </div>
+            <div class="icone-topo">✓</div>
+        </header>
+
+        <section class="resumo">
+            <article class="card total">
+                <span>Total de tarefas</span>
+                <strong id="total">0</strong>
+                <small>Todas as suas atividades</small>
+            </article>
+
+            <article class="card pendente">
+                <span>Pendentes</span>
+                <strong id="pendentes">0</strong>
+                <small>Ainda precisam ser feitas</small>
+            </article>
+
+            <article class="card concluida">
+                <span>Concluídas</span>
+                <strong id="concluidas">0</strong>
+                <small>Atividades finalizadas</small>
+            </article>
+        </section>
+
+        <section class="painel">
+            <div class="titulo-secao">
+                <div>
+                    <h2>Minhas tarefas</h2>
+                    <p>O que você precisa fazer hoje?</p>
+                </div>
+                <span class="bolinha">●</span>
+            </div>
+
+            <form id="formTarefa">
+                <input
+                    type="text"
+                    id="campoTarefa"
+                    placeholder="Digite uma nova tarefa..."
+                    maxlength="120"
+                    autocomplete="off"
+                >
+                <button type="submit">+ Adicionar</button>
+            </form>
+
+            <p id="mensagem" class="mensagem" role="status"></p>
+
+            <div class="filtros">
+                <button class="filtro ativo" data-filtro="todas">Todas</button>
+                <button class="filtro" data-filtro="pendentes">Pendentes</button>
+                <button class="filtro" data-filtro="concluidas">Concluídas</button>
+            </div>
+
+            <div id="listaTarefas" class="lista"></div>
+
+            <footer>
+                <span id="rodape">0 tarefas cadastradas</span>
+                <button id="limparConcluidas" class="limpar">
+                    Limpar concluídas
+                </button>
+            </footer>
+        </section>
+
+        <p class="frase">✦ Um dia de cada vez. Você consegue!</p>
+    </main>
+
+</body>
+</html>
